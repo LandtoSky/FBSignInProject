@@ -1,0 +1,93 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1404\cocoasubrtf460
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fnil\fcharset0 Menlo-Regular;}
+{\colortbl;\red255\green255\blue255;\red170\green13\blue145;}
+\margl1440\margr1440\vieww15500\viewh16560\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 Login Sequence\
+\
+1) Framework add\
+2) App delegate Setting\
+3) app.plist setting\
+    id & fb_id changed\
+\
+\pard\tx529\pardeftab529\pardirnatural\partightenfactor0
+
+\f1\fs22 \cf0 \CocoaLigature0    \cf2 <key>\cf0 LSApplicationQueriesSchemes\cf2 </key>\cf0 \
+    \cf2 <array>\cf0 \
+        \cf2 <string>\cf0 fbapi\cf2 </string>\cf0 \
+        \cf2 <string>\cf0 fbapi20130214\cf2 </string>\cf0 \
+        \cf2 <string>\cf0 fbapi20130410\cf2 </string>\cf0 \
+        \cf2 <string>\cf0 fbapi20130702\cf2 </string>\cf0 \
+        \cf2 <string>\cf0 fbapi20131010\cf2 </string>\cf0 \
+        \cf2 <string>\cf0 fbapi20131219\cf2 </string>\cf0 \
+        \cf2 <string>\cf0 fbapi20140410\cf2 </string>\cf0 \
+        \cf2 <string>\cf0 fbapi20140116\cf2 </string>\cf0 \
+        \cf2 <string>\cf0 fbapi20150313\cf2 </string>\cf0 \
+        \cf2 <string>\cf0 fbapi20150629\cf2 </string>\cf0 \
+        \cf2 <string>\cf0 fbauth\cf2 </string>\cf0 \
+        \cf2 <string>\cf0 fbauth2\cf2 </string>\cf0 \
+        \cf2 <string>\cf0 fbshareextension\cf2 </string>\cf0 \
+        \cf2 <string>\cf0 fb-messenger-api\cf2 </string>\cf0 \
+        \cf2 <string>\cf0 fb-messenger-api20140430\cf2 </string>\cf0 \
+        \cf2 <string>\cf0 fb-messenger-platform-20150128\cf2 </string>\cf0 \
+        \cf2 <string>\cf0 fb-messenger-platform-20150218\cf2 </string>\cf0 \
+        \cf2 <string>\cf0 fb-messenger-platform-20150305\cf2 </string>\cf0 \
+    \cf2 </array>\cf0 \
+	\cf2 <key>\cf0 CFBundleURLTypes\cf2 </key>\cf0 \
+	\cf2 <array>\cf0 \
+		\cf2 <dict>\cf0 \
+			\cf2 <key>\cf0 CFBundleURLSchemes\cf2 </key>\cf0 \
+			\cf2 <array>\cf0 \
+				\cf2 <string>\cf0 fb1659125294356130\cf2 </string> \cf0 \
+			\cf2 </array>\cf0 \
+		\cf2 </dict>\cf0 \
+	\cf2 </array>\cf0 \
+	\cf2 <key>\cf0 NSAppTransportSecurity\cf2 </key>\cf0 \
+	\cf2 <dict>\
+		<key>\cf0 NSAllowsArbitraryLoads\cf2 </key>\cf0 \
+		\cf2 <true/>\cf0 \
+		\cf2 <key>\cf0 NSExceptionDomains\cf2 </key>\cf0 \
+		\cf2 <dict>\cf0 \
+			\cf2 <key>\cf0 facebook.com\cf2 </key>\cf0 \
+			\cf2 <dict>\cf0 \
+				\cf2 <key>\cf0 NSIncludesSubdomains\cf2 </key>\cf0 \
+				\cf2 <true/>\cf0 \
+				\cf2 <key>\cf0 NSThirdPartyExceptionRequiresForwardSecrecy\cf2 </key>\cf0 \
+				\cf2 <false/>\cf0 \
+			\cf2 </dict>\cf0 \
+			\cf2 <key>\cf0 fbcdn.net\cf2 </key>\cf0 \
+			\cf2 <dict>\cf0 \
+				\cf2 <key>\cf0 NSIncludesSubdomains\cf2 </key>\cf0 \
+				\cf2 <true/>\cf0 \
+				\cf2 <key>\cf0 NSThirdPartyExceptionRequiresForwardSecrecy\cf2 </key>\cf0 \
+				\cf2 <false/>\cf0 \
+			\cf2 </dict>\cf0 \
+			\cf2 <key>\cf0 akamaihd.net\cf2 </key>\cf0 \
+			\cf2 <dict>\cf0 \
+				\cf2 <key>\cf0 NSIncludesSubdomains\cf2 </key>\cf0 \
+				\cf2 <true/>\cf0 \
+				\cf2 <key>\cf0 NSThirdPartyExceptionRequiresForwardSecrecy\cf2 </key>\cf0 \
+				\cf2 <false/>\cf0 \
+			\cf2 </dict>\cf0 \
+		\cf2 </dict>\cf0 \
+	\cf2 </dict>\cf0 \
+	\cf2 <key>\cf0 FacebookAppID\cf2 </key>\cf0 \
+	\cf2 <string>\cf0 1659125294356130\cf2 </string>\cf0 \
+	\cf2 <key>\cf0 FacebookDisplayName\cf2 </key>\cf0 \
+	\cf2 <string>\cf0 Doo\cf2 </string>\cf0 \
+\
+
+\f0\fs24 \CocoaLigature1 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 \
+\
+4) login button action define\
+\
+\
+- Data\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+{\field{\*\fldinst{HYPERLINK "https://developers.facebook.com/docs/ios/getting-started#startcoding"}}{\fldrslt \cf0 https://developers.facebook.com/docs/ios/getting-started#startcoding}}\
+- fbauth2 error \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+{\field{\*\fldinst{HYPERLINK "http://stackoverflow.com/questions/31986475/fbauth2-is-missing-from-your-info-plist-under-lsapplicationqueriesschemes-and-is"}}{\fldrslt \cf0 http://stackoverflow.com/questions/31986475/fbauth2-is-missing-from-your-info-plist-under-lsapplicationqueriesschemes-and-is}}}
