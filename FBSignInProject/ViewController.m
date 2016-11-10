@@ -101,6 +101,34 @@
 - (void) requestUserSignUp:(NSDictionary *)param{
   
     NSLog(@"FB User Info ==>\n%@", param);
+    FBSDKLoginManager *login = [[FBSDKLoginManager alloc] init];
+    [login logOut];
+    [FBSDKAccessToken setCurrentAccessToken:nil];
+    
+    UIAlertController * alert = [UIAlertController
+                                 alertControllerWithTitle:@"Facebook Login Success"
+                                 message:[NSString stringWithFormat:@"Log In with %@", param[@"user_email"]]
+                                 preferredStyle:UIAlertControllerStyleAlert];
+    
+    UIAlertAction* yesButton = [UIAlertAction
+                                actionWithTitle:@"Yes, please"
+                                style:UIAlertActionStyleDefault
+                                handler:^(UIAlertAction * action) {
+                                    //Handle your yes please button action here
+                                    
+                                }];
+    
+    UIAlertAction* noButton = [UIAlertAction
+                               actionWithTitle:@"No, thanks"
+                               style:UIAlertActionStyleDefault
+                               handler:^(UIAlertAction * action) {
+                                   //Handle no, thanks button
+                               }];
+    
+    [alert addAction:yesButton];
+    [alert addAction:noButton];
+    
+    [self presentViewController:alert animated:YES completion:nil];
     
 }
 
